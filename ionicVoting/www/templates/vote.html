@@ -1,0 +1,23 @@
+<ion-view view-title="Questions">
+  <ion-content class="padding">
+    <ion-list>
+        <div class="card">
+          <div class="item item-text-wrap">
+            {{question}}
+          </div>
+        </div>
+
+        <div class="card" ng-repeat='option in options'>
+          <div class="item item-text-wrap" ng-click="">
+            <input
+              type="radio"
+              name="options[]"
+              ng-click="saveOptionId(option[0])"
+            > {{option[1]}}
+          </div>
+        </div>
+        <button id="button_submit" class="button button-block button-positive" ng-click='submitVote()' >Submit</button>
+    </ion-list>
+  </ion-content>
+</ion-view>
+

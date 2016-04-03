@@ -1,0 +1,52 @@
+<ion-view view-title="Questions">
+  <ion-content class="padding">
+    <ion-list>
+        <ion-item class="item-icon-right item-avatar" ng-repeat="question in questions" ng-click="getVotings(question)">
+
+            <h2>{{question.question}}</h2>
+
+        </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
+
+
+<script id="modal.html" type="text/ng-template">
+  <ion-modal-view>
+    <ion-header-bar class="bar bar-header bar-positive">
+      <h1 class="title" ng-bind='title'></h1>
+      <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+    </ion-header-bar>
+    <ion-content class="padding">
+      <ion-list ng-if=''>
+        <ion-item class="item-icon-right item-avatar" ng-repeat="(key,value) in result" >
+          sss
+        </ion-item>
+      </ion-list>
+      <ion-list>
+          <ion-item class="item-icon-right item-avatar" ng-repeat="(key,value) in result" >
+            <div class="row">
+              <div class="col">
+                <i>Option</i>
+              </div>
+              <div class="col">
+                <i>Number of Votes</i>
+              </div>
+            </div>
+          </ion-item>
+          <ion-item class="item-icon-right item-avatar" ng-repeat="(key,value) in result" >
+            
+            <div class="row">
+              <div class="col">
+                <i>{{key}}</i>
+              </div>
+              <div class="col">
+                <i>{{value}}</i>
+              </div>
+            </div>
+              
+          </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-modal-view>
+</script>

@@ -1,0 +1,24 @@
+<ion-view view-title="New Questions">
+  <ion-content class="padding">
+    <ion-list>
+        <ion-item class="item-icon-right item-avatar" ng-repeat="question in questions" ng-click="modal.show()" href="#/tab/vote/{{question.id}}">
+
+            <h2>{{question.question}}</h2>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+            
+        </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
+
+
+<script id="my-modal.html" type="text/ng-template">
+  <ion-modal-view>
+    <ion-header-bar>
+      <h1 class="title" ng-model="item.question"></h1>
+    </ion-header-bar>
+    <ion-content>
+        
+    </ion-content>
+  </ion-modal-view>
+</script>

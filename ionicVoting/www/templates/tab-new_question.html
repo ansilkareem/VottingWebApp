@@ -1,0 +1,28 @@
+<ion-view view-title="Add New Question">
+  <ion-content>
+    <div class="list padding">
+      <form name="formData.addQuestionForm" novalidate>
+          <label class="item item-input">
+              <textarea placeholder="question" ng-model='formData.question' name='question' required ng-Maxlength='500' maxlength="500"></textarea>
+          </label>
+          <br>
+          <label class="item item-input">
+              <textarea placeholder="option 1" ng-model='formData.option_1' required ng-Maxlength='60' maxlength="60"></textarea>
+          </label>
+          <br>
+          <label class="item item-input">
+              <textarea placeholder="option 2" ng-model='formData.option_2' required ng-Maxlength='60' maxlength="60"></textarea>
+          </label>
+          <br>
+          <label class="item item-input">
+              <textarea placeholder="option 3" ng-model='formData.option_3' required ng-Maxlength='60' maxlength="60"></textarea>
+          </label>
+          <br>
+          <label class="item item-input">
+              <textarea placeholder="option 4" ng-model='formData.option_4' required ng-Maxlength='60' maxlength="60"></textarea>
+          </label>
+          <button id="button_submit" class="button button-block button-positive" ng-disabled='formData.addQuestionForm.$invalid' ng-click='create_question()' ng-model='formData.submit_btn'>Create Question</button>
+      </form>
+    </div>
+  </ion-content>
+</ion-view>
